@@ -1,0 +1,447 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes y colores */
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Asegúrate de que el body y el elemento html ocupen el 100% de la altura */
+html,
+body {
+    height: 100%;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Barra de navegación */
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Nombre en la esquina superior izquierda */
+.name {
+    margin: 0;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, rgb(67, 124, 205),rgb(69,214,202));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navegación */
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Elementos de navegación */
+.nav-item {
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    text-decoration: none;
+}
+
+/* Botón Dark Mode / Light Mode en la esquina superior derecha */
+.toggle-mode {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.mode-icon {
+    font-size: 1.2rem;
+}
+
+.toggle-mode .mode-icon::before {
+    content: '\f185';
+    /* Icono de luna para Dark Mode */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+}
+
+body.dark-mode .toggle-mode .mode-icon::before {
+    content: '\f186';
+    /* Icono de sol para Light Mode */
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.intro {
+    flex: 1;
+}
+
+#intro-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Contenedor del perfil */
+.profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-left: 2rem;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+/* Imagen del perfil */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nombre del perfil */
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+/* Oneliner del perfil */
+.profile-oneliner {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Biografía del perfil */
+.profile-bio {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Lista de íconos de contacto */
+.contact-icons {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-icons .contact-item:hover i {
+    color: #e9b555;
+}
+
+
+/* Ítem de contacto */
+.contact-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.contact-link {
+    color: #333;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.contact-link:hover {
+    color: #e9b555;
+}
+
+/* Estilos para Dark Mode */
+body.dark-mode {
+    background-color: #222831;
+    color: #eeeeee;
+}
+
+body.dark-mode .header {
+    background-color: #393e46;
+}
+
+body.dark-mode .nav-item {
+    color: #dddddd;
+}
+
+body.dark-mode .nav-item:hover {
+    color: #e9b555;
+}
+
+body.dark-mode .toggle-mode {
+    background-color: #eeeeee;
+    color: #222831;
+}
+
+body.dark-mode .profile {
+    background-color: #3a3e44;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact-link {
+    color: #eeeeee;
+}
+
+body.dark-mode .contact-link:hover {
+    color: #e9b555;
+}
+
+/* Estilos para Light Mode */
+body.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-mode .header {
+    background-color: #f9f9f9;
+}
+
+body.light-mode .nav-item {
+    color: #333333;
+}
+
+body.light-mode .nav-item:hover {
+    color: #e9b555;
+}
+
+body.light-mode .toggle-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.light-mode .profile {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .contact-link {
+    color: #333333;
+}
+
+body.light-mode .contact-link:hover {
+    color: #e9b555;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.noise {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 1%), radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 1%);
+    background-size: 4px 4px, 8px 8px;
+    background-position: 0 0, 4px 4px;
+}
+
+/* Chatbot */
+.open-chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e9b555;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.open-chatbot:hover {
+    background-color: #f1c27d;
+    transform: translateY(-4px);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-header {
+    background-color: #e9b555;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chatbot-input-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-input {
+    flex-grow: 1;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.chatbot-input:focus {
+    border-color: #e9b555;
+}
+
+.chatbot-send-button {
+    margin-left: 10px;
+    background-color: #e9b555;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.chatbot-send-button:hover {
+    background-color: #f1c27d;
+    transform: translateY(-2px);
+}
+
+.close-chatbot {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilos del chatbot para Dark Mode */
+body.dark-mode .chatbot-container {
+    background-color: #393e46;
+    color: #fff;
+}
+
+body.dark-mode .chatbot-header {
+    background-color: #e9b555;
+}
+
+body.dark-mode .chatbot-input {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .chatbot-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .chatbot-input:focus {
+    border-color: #e9b555;
+}
+
+/* Estilos del chatbot para Light Mode */
+body.light-mode .chatbot-container {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+body.light-mode .chatbot-header {
+    background-color: #e9b555;
+}
+
+body.light-mode .chatbot-input {
+    color: #333;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .chatbot-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .chatbot-input:focus {
+    border-color: #e9b555;
+}
+.open-chatbot i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.chatbot-send-button i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/*FOOTER*/
+/* Estilos para Dark Mode */
+body.dark-mode .footer {
+    background-color: #393e46;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .copyright {
+    color: #eeeeee;
+}
+
+/* Estilos para Light Mode */
+body.light-mode .footer {
+    background-color: #f9f9f9;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .copyright {
+    color: #333333;
+}
